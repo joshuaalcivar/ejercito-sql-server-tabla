@@ -1,0 +1,26 @@
+create table CUARTEL (
+   ID_CUARTEL           int                  not null,
+   CUARTEL_N            varchar(25)          null,
+   UBICACION            varchar(25)          null,
+   constraint PK_CUARTEL primary key (ID_CUARTEL)
+)
+go
+
+create table SERVICIOS_POR_CUARTEL (
+   ID_CUARTEL           int                  not null,
+   ID_SOLDADO           int                  not null,
+   TIPODESERVICIO       varchar(25)          null,
+   DURACION             varchar(25)          null,
+   constraint PK_SERVICIOS_POR_CUARTEL primary key (ID_CUARTEL, ID_SOLDADO)
+)
+go
+
+create table SOLDADOS (
+   ID_SOLDADO           int                  not null,
+   NOMBRES              varchar(25)          null,
+   APELLIDOS            varchar(25)          null,
+   DIRECCION            varchar(25)          null,
+   TELEFONO             varchar(10)          null,
+   constraint PK_SOLDADOS primary key (ID_SOLDADO)
+)
+go
